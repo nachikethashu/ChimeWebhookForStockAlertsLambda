@@ -1,0 +1,31 @@
+{
+  "name": "stock-alerts",
+  "version": "1.0.0",
+  "description": "chime bot + lambda + stock",
+  "main": "index.js",
+  "dependencies": {
+    "stocks.js": "0.0.17"
+  },
+  "devDependencies": {
+    "eslint": "^5.11.1",
+    "eslint-config-standard": "^12.0.0",
+    "eslint-plugin-import": "^2.14.0",
+    "eslint-plugin-node": "^8.0.0",
+    "eslint-plugin-promise": "^4.0.1",
+    "eslint-plugin-standard": "^4.0.0",
+    "webpack": "^4.28.3",
+    "webpack-cli": "^3.1.2"
+  },
+  "scripts": {
+    "build": "webpack --config webpack.config.js",
+    "release": "eslint ./ && npm run build && ./uploader.sh"
+  },
+  "keywords": [
+    "stock",
+    "alerts",
+    "chime",
+    "bot"
+  ],
+  "author": "nachikethashu",
+  "license": "ISC"
+}
